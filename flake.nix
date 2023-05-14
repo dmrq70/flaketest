@@ -18,17 +18,17 @@
         nixos = nixpkgs.lib.nixosSystem {
 	  modules = [
 	    ./nixos/configuration.nix
+	    home-manager.nixosModules.home-manager
+	    {
+              home-manager = {
+                 useUserPackages = true;
+		 useGlobalPkgs = true;
+                 users.diego = ./home-manager/home.nix;
+              };
+	    }
 	  ];
 	};
       };
-      homeConfigurations = {
-        diego = home-manager.lib.homeManagerConfiguration {
-	  inherit pkgs;
-	  modules = [
-	    ./home-manager/home.nix
-	  ];
-	};
-      };
-    };
+   };
 }
   
