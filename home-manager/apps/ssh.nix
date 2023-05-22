@@ -11,7 +11,7 @@
       };
       "dreyes-ovpn" = {
         hostname= "10.20.0.3";
-        dynamicForward = [{ port = 9060 ; }];
+        dynamicForwards = [{ port = 9060 ; }];
       };
       "tecinf4" = {
         hostname = "tecinf4";
