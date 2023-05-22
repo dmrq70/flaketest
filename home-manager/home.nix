@@ -5,12 +5,14 @@
     ./apps/zsh.nix
     ./apps/git.nix
     ./apps/ssh.nix
+    ./apps/tmux.nix
   ];
  
   home.username = "diego";
   home.homeDirectory = "/home/diego";
   home.stateVersion = "22.11";
-  home.packages = with pkgs; [ 
+  home.packages = with pkgs; [
+    tmux
     httpie 
     lazygit
     duf
