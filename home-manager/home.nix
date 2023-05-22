@@ -23,7 +23,6 @@
     fzf
     kitty
     ripgrep
-    emacs-with-packages
     bat
   ];
   programs.home-manager.enable = true;

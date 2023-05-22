@@ -7,7 +7,7 @@
     matchBlocks = {
       "dreyes" = {
         hostname = "dreyes.robin-major.ts.net";
-	dinamicForward = 9060;
+	dynamicForwards = [{port = 9060; }];
       };
     };
   };	       
