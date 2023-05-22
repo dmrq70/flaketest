@@ -45,7 +45,8 @@
       "ipacs" = {
         user =  "administrador";
         hostname =  "10.20.0.7";
-        dynamicForwards = [{port= "9060";}];  
+        dynamicForwards = [{port= 9060;}];  
       };
     };	       
-};
+  };
+}
