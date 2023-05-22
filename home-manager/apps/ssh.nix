@@ -30,11 +30,11 @@
         user =  "root";
         proxyJump =  "dreyes";
         identityFile =  "~/.ssh/id_ed25519-bbva";
-        localForwards =  {
+        localForwards =  [{
           bind.port = 3000;
           host.address = "76.252.94.55";
           host.port = 3000;
-        };
+        }];
       }; 
       "gitlab.motorc.com.ar" = {
         port =  2022;
