@@ -12,6 +12,10 @@
     historyLimit = 5000;
     clock24 = true;
     
-    
+    extraConfig = ''
+set -g status-position top
+set -g status-style bg=colour19
+
+'';
   };
 }
