@@ -26,7 +26,9 @@
     kitty
     ripgrep
     bat
+    wezterm
   ];
+  programs.firefox.enable = true;
   programs.home-manager.enable = true;
 }
 
