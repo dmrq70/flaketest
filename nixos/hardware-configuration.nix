@@ -16,8 +16,8 @@
   fileSystems."/" =
     { 
       #device = "/dev/disk/by-uuid/d6d3d588-5fe6-4cea-9626-070f293dadaa";
-      device = "/dev/disk/by-label/nixroot";
-      fsType = "ext4";
+      device = "/dev/disk/by-label/root";
+      fsType = "btrfs";
     };
 
   swapDevices = [ ];
