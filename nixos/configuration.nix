@@ -46,7 +46,6 @@
   # Configure keymap in X11
   services.xserver = {
     enable = true;
-    videoDrivers = ["nvidia"];
     layout = "us";
     xkbVariant = "intl";
     displayManager.sddm.enable = true;
@@ -54,7 +53,6 @@
   };
   hardware = {
      opengl.enable =true;
-     nvidia.modesetting.enable = true;
   };
 
 
