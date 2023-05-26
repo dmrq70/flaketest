@@ -46,11 +46,17 @@
   # Configure keymap in X11
   services.xserver = {
     enable = true;
+    videoDrivers = ["nvidia"];
     layout = "us";
     xkbVariant = "intl";
     displayManager.sddm.enable = true;
     desktopManager.plasma5.enable = true;
   };
+  hardware = {
+     opengl.enable =true;
+     nvidia.modesetting.enable = true;
+  };
+
 
   # Configure console keymap
   console.keyMap = "us-acentos";
