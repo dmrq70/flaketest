@@ -27,6 +27,10 @@
     ripgrep
     bat
     wezterm
+    mpv
+    ranger
+    bottom
+    htop
   ];
   programs.firefox.enable = true;
   programs.home-manager.enable = true;

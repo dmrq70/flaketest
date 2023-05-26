@@ -48,6 +48,7 @@
     enable = true;
     layout = "us";
     xkbVariant = "intl";
+    xkbOptions = "ctrl:swapcaps";
     displayManager.sddm.enable = true;
     desktopManager.plasma5.enable = true;
   };
@@ -57,7 +58,8 @@
 
 
   # Configure console keymap
-  console.keyMap = "us-acentos";
+  #console.keyMap = "us-acentos";
+  console.useXkbConfig = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.diego = {
