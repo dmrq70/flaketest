@@ -66,7 +66,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "diego";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "lxd" "libvirtd" ];
     packages = with pkgs; [];
   };
   programs.zsh.enable = true;
@@ -85,11 +85,17 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  virtualisation.lxd.enable = true;
+  virtualisation.podman.enable = true;
+  virtualisation.libvirtd.enable = true;
+  programs.dconf.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     git
+    virt-manager
   ];
   environment.shells = [ pkgs.zsh ];
 
