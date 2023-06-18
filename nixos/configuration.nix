@@ -75,6 +75,12 @@
 #    useUserPackages = true;
 #    users.diego = import ./home.nix;
 #  };
+  programs.ssh.knownHosts = {
+    "*" = {
+      certAuthority = true;
+      publicKey = "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOR7E4rbKDYWCuAeet4pPuBCvIxPJzf82YBbka7BfPX/FVQ755NGwnktj4GEPAhdCsWXcfWC5zgFq22bV/xpUe4= diego@nixos";
+    };
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -98,8 +104,15 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    extraConfig = ''
+    HostCertificate /etc/ssh/ssh_key_nixos-cert.pub
+    TrustedUserCAKeys /etc/ssh/users_ca.pub
+    '';
+  };
 
+  
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];

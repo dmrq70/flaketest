@@ -6,6 +6,7 @@
     ./apps/git.nix
     ./apps/ssh.nix
     ./apps/tmux.nix
+    ./apps/emacs.nix
   ];
  
   home.username = "diego";
@@ -31,6 +32,10 @@
     ranger
     bottom
     htop
+    zip
+    age
+    sops
+    tree
   ];
   programs.firefox.enable = true;
   programs.home-manager.enable = true;
