@@ -36,6 +36,7 @@
     age
     sops
     tree
+    transmission
   ];
   programs.firefox.enable = true;
   programs.home-manager.enable = true;
